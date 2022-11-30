@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-deployment
+  labels:
+    app: shopping
+spec:
+  replicas: 2 # pod 개수 지정 
+  selector:
+    matchLabels:
+      app: shopping
+  template:
+    metadata:
+      labels:
+        app: shopping
+    spec:
+      containers:
+      - name: shopping-container
+        image: asia.gcr.io/midyear-spot-368821/shoppingcart:v1
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "250m"
+          limits:
+            cpu: "500m"
