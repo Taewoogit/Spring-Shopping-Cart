@@ -15,7 +15,7 @@ spec:
         app: shopping
     spec:
       nodeSelector:
-              node: service
+        node: service
       containers:
       - name: shopping-container
         image: asia.gcr.io/midyear-spot-368821/shoppingcart:v1
