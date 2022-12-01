@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: shop-deployment
   labels:
-    app: shopping
+    tier: was
 spec:
   replicas: 2 # pod 개수 지정 
   selector:
     matchLabels:
-      app: shopping
+      tier: was
   template:
     metadata:
       labels:
-        app: shopping
+        tier: was
     spec:
       nodeSelector:
         node: service
