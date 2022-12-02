@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nodeport
+  annotations:
+    cloud.google.com/backend-config: '{"default": "gogle-backendconfig"}'
 spec:
   ports:
   - port: 8080

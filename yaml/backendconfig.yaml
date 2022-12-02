@@ -1,0 +1,11 @@
+apiVersion: cloud.google.com/v1
+kind: BackendConfig
+metadata:
+  name: gogle-backendconfig
+spec:
+  cdn:
+    enabled: true
+  securityPolicy:
+    name: "gogle-policy"
+  sessionAffinity:
+    affinityType: "CLIENT_IP"
