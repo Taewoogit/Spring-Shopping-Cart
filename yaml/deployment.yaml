@@ -5,7 +5,7 @@ metadata:
   labels:
     tier: was
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       tier: was
