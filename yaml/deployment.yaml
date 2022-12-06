@@ -5,11 +5,7 @@ metadata:
   labels:
     tier: was
 spec:
-<<<<<<< HEAD
-  replicas: 3 # pod 개수 지정 
-=======
   replicas: 3
->>>>>>> d4a672083438784c44d11d74e3f8832d2b646c1d
   selector:
     matchLabels:
       tier: was
